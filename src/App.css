@@ -1,0 +1,54 @@
+@keyframes idle {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.animate-idle{
+  animation: idle 2s ease-in-out infinite;
+}
+
+@keyframes damage {
+      0% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-damage{
+  animation: damage 0.25 ease-in;
+}
+@keyframes reveal-left {
+  from {
+    width: 50%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    width: 50%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+.animate-reveal-left {
+  animation: reveal-left 0.8s ease-out forwards;
+}
+
+.animate-reveal-right {
+  animation: reveal-right 0.8s ease-out forwards;
+}
