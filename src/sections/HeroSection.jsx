@@ -19,18 +19,18 @@ export default function HeroSection() {
                 <div className="h-full w-full shadow shadow-blue-200 rounded-xl flex overflow-hidden">
                     <div className="bg-slate-800 h-full w-[30%] px-4 py-6 flex flex-col gap-10">
                         <div className="flex gap-4 justify-center items-center">
-                            <div className="h-14 w-14 rounded-full border border-slate-600 overflow-hidden">
-                                <img src={Elf} alt="" className="" />
+                            <div className="sm:h-14 sm:w-14 h-8 w-10 rounded-full border border-slate-600 overflow-hidden">
+                                <img src={Elf} alt="" className="w-full h-full object-cover" />
                             </div>
-                            <div className="w-[50%] flex flex-col text-sm">
-                                <span className="text-white">Ranger</span>
-                                <span className="text-white">Level:12</span>
-                                <div className="h-2 w-16 bg-blue-500 rounded-xl mt-1"></div>
+                            <div className="sm:w-[50%] w-[30%] flex flex-col text-sm">
+                                <span className="text-white w-full sm:text-base text-[8px]">Ranger</span>
+                                <span className="text-white w-full sm:text-base text-[8px]">Level:12</span>
+                                <div className="sm:h-2 h-1.5 sm:w-16 w-8 bg-blue-500 rounded-xl mt-1"></div>
                             </div>
 
 
                         </div>
-                        <ul className="h-[50%] w-full text-white font-inter space-y-8 p-2">
+                        <ul className="h-[50%] w-full sm:text-base text-[10px] text-white font-inter space-y-8 p-2">
                             <li>Battle/Quest</li>
                             <li>Stats</li>
                             <li>Calendar</li>
