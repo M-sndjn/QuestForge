@@ -7,15 +7,15 @@ export default function HeroSection() {
 
     return (
         
-        <section  className="h-full w-full flex">
+        <section  className="min-h-screen w-full flex flex-col sm:flex-row">
             
-            <div className="h-full w-[40%] flex flex-col justify-center translate-x-20 gap-4">
+            <div className="h-[600px] w-full sm:w-[40%] flex flex-col justify-center translate-x-20 gap-4">
                 <span className="text-5xl font-semibold font-inter w-[90%] leading-tight">Turn goals  into Quest</span>
                 <span className="text-4xl font-semibold font-inter text-blue-500">Level up your life</span>
                 <p className="text-lg font-sm font-inter w-[80%] text-left leading-8 ">Quest Forge turns your tasks into adventures. Complete quest, earn XP, maintain streaks, unlock achievements, and become the most productive version of yourself</p>
                 <button className=" h-12 w-36 mt-8 bg-blue-500 rounded-md text-white font-inter"> Start for free</button>
             </div>
-            <div className="h-full w-[60%] p-8 bg-white">
+            <div className="h-[560px] sm:w-[60%] w-full p-8 bg-white">
                 <div className="h-full w-full shadow shadow-blue-200 rounded-xl flex overflow-hidden">
                     <div className="bg-slate-800 h-full w-[30%] px-4 py-6 flex flex-col gap-10">
                         <div className="flex gap-4 justify-center items-center">
@@ -25,7 +25,7 @@ export default function HeroSection() {
                             <div className="w-[50%] flex flex-col text-sm">
                                 <span className="text-white">Ranger</span>
                                 <span className="text-white">Level:12</span>
-                                <div className="h-2 w-20 bg-blue-500 rounded-xl mt-1"></div>
+                                <div className="h-2 w-16 bg-blue-500 rounded-xl mt-1"></div>
                             </div>
 
 
@@ -41,7 +41,7 @@ export default function HeroSection() {
                             <span className="flex gap-4">18 Days <img src={Fire} alt="" className="w-6"/> </span> 
                         </div>
                     </div>
-                    <div className="h-full w-full flex flex-col">
+                    <div className="h-[490px] w-full flex flex-col">
                         {/* Battle */}
                         <div className="h-2/3 w-full flex flex-col items-center p-6 relative justify-between">
                             <img src={Forest} className="absolute inset-0 h-full w-full z-10 object-cover brightness-75"/>
