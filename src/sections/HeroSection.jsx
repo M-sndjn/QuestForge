@@ -9,7 +9,7 @@ export default function HeroSection() {
         
         <section  className="min-h-screen w-full flex flex-col sm:flex-row">
             
-            <div className="h-[600px] w-full sm:w-[40%] flex flex-col justify-center translate-x-20 gap-4">
+            <div className="h-[600px] w-full sm:w-[40%] flex flex-col justify-center sm:translate-x-20 translate-x-0 gap-4">
                 <span className="sm:text-5xl text-3xl font-semibold font-inter w-[90%] leading-tight">Turn goals  into Quest</span>
                 <span className="sm:text-4xl text-2xl font-semibold font-inter text-blue-500">Level up your life</span>
                 <p className="sm:text-lg text-sm font-sm font-inter w-[80%] text-left leading-8 ">Quest Forge turns your tasks into adventures. Complete quest, earn XP, maintain streaks, unlock achievements, and become the most productive version of yourself</p>
