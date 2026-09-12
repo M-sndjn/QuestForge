@@ -10,10 +10,10 @@ export default function HeroSection() {
         <section  className="min-h-screen w-full flex flex-col sm:flex-row">
             
             <div className="h-[600px] w-full sm:w-[40%] flex flex-col justify-center translate-x-20 gap-4">
-                <span className="text-5xl font-semibold font-inter w-[90%] leading-tight">Turn goals  into Quest</span>
-                <span className="text-4xl font-semibold font-inter text-blue-500">Level up your life</span>
-                <p className="text-lg font-sm font-inter w-[80%] text-left leading-8 ">Quest Forge turns your tasks into adventures. Complete quest, earn XP, maintain streaks, unlock achievements, and become the most productive version of yourself</p>
-                <button className=" h-12 w-36 mt-8 bg-blue-500 rounded-md text-white font-inter"> Start for free</button>
+                <span className="sm:text-5xl text-3xl font-semibold font-inter w-[90%] leading-tight">Turn goals  into Quest</span>
+                <span className="sm:text-4xl text-2xl font-semibold font-inter text-blue-500">Level up your life</span>
+                <p className="sm:text-lg text-sm font-sm font-inter w-[80%] text-left leading-8 ">Quest Forge turns your tasks into adventures. Complete quest, earn XP, maintain streaks, unlock achievements, and become the most productive version of yourself</p>
+                <button className=" sm:h-12 sm:w-36 h-8 w-24 text-sm sm:text-base mt-8 bg-blue-500 rounded-md text-white font-inter"> Start for free</button>
             </div>
             <div className="h-[560px] sm:w-[60%] w-full p-8 bg-white">
                 <div className="h-full w-full shadow shadow-blue-200 rounded-xl flex overflow-hidden">
