@@ -1,15 +1,15 @@
 export default function PricingSection() {
 
     return (
-        <section  className="bg-white min-h-full h-full w-full font-inter flex flex-col items-center">
+        <section  className="bg-white  w-full font-inter flex flex-col items-center gap-6 ">
             <div className="w-full bg-white flex flex-col items-center justify-center gap-3">
                 <span className="text-blue-500 font-semibold">Pricing</span>
                 <span className="text-xl font-semibold">Choose Your Adventure</span>
                 <span className="text-xs font-light w-96 text-center">Start for free or unlcok more features with premium plan.</span>
                 <span className="text-xs font-light w-96 text-center">Your goal. Your rules</span>
             </div>
-            <ul className=" w-[80%] flex justify-around ">
-                <li className="border shadow w-72 h-96 my-2 pl-4 py-4 gap-7 justify- rounded-md flex flex-col ">
+            <ul className=" w-[80%] flex sm:flex-row flex-col justify-around items-center gap-6 ">
+                <li className="border shadow w-80 sm:w-72 h-96 my-2 pl-4 py-4 gap-7 justify- rounded-md flex flex-col ">
                     <div className="flex flex-col gap-1">
                         <div className="mt-4">Icon</div>
                         <span className="font-semibold text-xl">Free</span>
@@ -33,7 +33,7 @@ export default function PricingSection() {
                         Get Started
                     </div>
                 </li>
-                <li className="border bg-blue-500/10 border-blue-500 shadow-blue-500 shadow w-72 h-96 my-2 pl-4 py-4 gap-7 justify- rounded-md flex flex-col ">
+                <li className="border bg-blue-500/10 border-blue-500 shadow-blue-500 shadow w-80 sm:w-72 h-96 my-2 pl-4 py-4 gap-7 justify- rounded-md flex flex-col ">
                     <div className="flex flex-col gap-1">
                         <div className="mt-4">Icon</div>
                         <span className="font-semibold text-xl">Pro</span>
@@ -58,7 +58,7 @@ export default function PricingSection() {
                         Get Started
                     </div>
                 </li>
-                                <li className="border shadow w-72 h-96 my-2 pl-4 py-4 gap-7 justify- rounded-md flex flex-col ">
+                <li className="border shadow w-80 sm:w-72 h-96 my-2 pl-4 py-4 gap-7 justify- rounded-md flex flex-col ">
                     <div className="flex flex-col gap-1">
                         <div className="mt-4">Icon</div>
                         <span className="font-semibold text-xl">Elite</span>

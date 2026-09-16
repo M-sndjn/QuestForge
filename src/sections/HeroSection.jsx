@@ -17,14 +17,14 @@ export default function HeroSection() {
             </div>
             <div className="h-[560px] sm:w-[60%] w-full p-8 bg-white">
                 <div className="h-full w-full shadow shadow-blue-200 rounded-xl flex overflow-hidden">
-                    <div className="bg-slate-800 h-full w-[30%] px-4 py-6 flex flex-col gap-10">
-                        <div className="flex gap-4 justify-center items-center">
-                            <div className="sm:h-14 sm:w-14 h-8 w-10 rounded-full border border-slate-600 overflow-hidden">
+                    <div className="bg-slate-800 h-full w-[30%] sm:px-4 px-3 sm:py-6 py-4 flex flex-col gap-10">
+                        <div className="flex gap-1 sm+gap-4 justify-center items-center">
+                            <div className="sm:h-14 sm:w-14 h-8 w-8 rounded-full border border-slate-600 overflow-hidden">
                                 <img src={Elf} alt="" className="w-full h-full object-cover" />
                             </div>
-                            <div className="sm:w-[50%] w-[30%] flex flex-col text-sm">
-                                <span className="text-white w-full sm:text-base text-[8px]">Ranger</span>
-                                <span className="text-white w-full sm:text-base text-[8px]">Level:12</span>
+                            <div className="sm:w-[50%] w-[30%] flex flex-col text-sm ">
+                                <span className="text-white w-full sm:text-sm text-[8px] leading-3">Ranger</span>
+                                <span className="text-white w-full sm:text-xs text-[8px] leading-3">Level:12</span>
                                 <div className="sm:h-2 h-1.5 sm:w-16 w-8 bg-blue-500 rounded-xl mt-1"></div>
                             </div>
 
@@ -36,9 +36,9 @@ export default function HeroSection() {
                             <li>Calendar</li>
                             <li>Setting</li>
                         </ul>
-                        <div className="h-24 w-full flex flex-col text-white font-inter bg-slate-700 p-4 rounded-lg">
+                        <div className="sm:h-24 h-20 sm:p-4 p-2 w-full flex flex-col sm:text-base text-[10px] text-white whitespace-nowrap justify-center font-inter bg-slate-700 rounded-lg">
                             <span>Daily Streak: </span>
-                            <span className="flex gap-4">18 Days <img src={Fire} alt="" className="w-6"/> </span> 
+                            <span className="flex sm:gap-4 gap-2">18 Days <img src={Fire} alt="" className="sm:w-6 sm:h-6 h-4 w-4"/> </span> 
                         </div>
                     </div>
                     <div className="h-[490px] w-full flex flex-col">
@@ -52,7 +52,7 @@ export default function HeroSection() {
                             </div>
                             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
                                 <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black/40 blur-md rounded-full"></div>
-                                <img src={Goblin} className="w-36 h-36 object-contain animate-idle" />
+                                <img src={Goblin} className="sm:w-36 w-20 h-36 object-contain animate-idle" />
                             </div>
                             {/*Chapters*/}
                             <ul className="bg-black/50 shadow-lg shadow-black/50 backdrop-blur-sm rounded-full w-32 h-3 z-20 flex justify-center items-center gap-2">
@@ -64,13 +64,13 @@ export default function HeroSection() {
                             </ul>
                         </div>
                         {/* Tasks */}
-                        <div className="h-1/3 w-full p-1">
+                        <div className="h-1/3 w-full p-1 sm:text-sm text-[8px]">
                             <div className="h-full w-full bg-white shadow-sm shadow-black rounded-lg p-2">
                                 <ul className="grid grid-cols-2 grid-rows-2 gap-4">
-                                    <li className="h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono text-xs justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="w-3 h-3 rounded-sm border border-black"></button></li>
-                                    <li className="h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono text-xs justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="w-3 h-3 rounded-sm border border-black"></button></li>
-                                    <li className="h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono text-xs justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="w-3 h-3 rounded-sm border border-black"></button></li>
-                                    <li className="h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono text-xs justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="w-3 h-3 rounded-sm border border-black"></button></li>
+                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
+                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
+                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
+                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
                                 </ul>
                             </div>
                         </div>

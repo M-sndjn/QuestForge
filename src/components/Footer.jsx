@@ -1,8 +1,7 @@
 export default function Footer() {
     return (
-        <footer className="w-full bg-slate-900 text-white font-inter">
-
-            <div className="w-[80%] mx-auto py-10 flex justify-between">
+        <footer className="w-full mt-4 bg-slate-900 text-white font-inter">
+            <div className="w-[80%] mx-auto py-10 flex flex-col sm:flex-row justify-between gap-10">
 
                 <div className="flex flex-col gap-2">
                     <span className="font-semibold text-xl">Quest Forge</span>
@@ -14,8 +13,7 @@ export default function Footer() {
                     </span>
                 </div>
 
-                <div className="flex gap-20">
-
+                <div className="flex gap-16 sm:gap-20">
                     <div className="flex flex-col gap-2">
                         <span className="font-semibold">Product</span>
                         <span className="text-xs text-slate-300">Features</span>
@@ -28,12 +26,11 @@ export default function Footer() {
                         <span className="text-xs text-slate-300">FAQ</span>
                         <span className="text-xs text-slate-300">Support</span>
                     </div>
-
                 </div>
 
             </div>
 
-            <div className="border-t border-slate-700 w-[80%] mx-auto py-4 flex justify-between">
+            <div className="border-t border-slate-700 w-[80%] mx-auto py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
                 <span className="text-xs text-slate-400">
                     © 2026 Quest Forge
                 </span>
@@ -43,7 +40,6 @@ export default function Footer() {
                     <span>Terms</span>
                 </div>
             </div>
-
         </footer>
     );
 }
