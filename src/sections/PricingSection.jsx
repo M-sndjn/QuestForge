@@ -1,7 +1,8 @@
+import WizardHat from "../assets/WizardHat.png"
 export default function PricingSection() {
 
     return (
-        <section  className="bg-white  w-full font-inter flex flex-col items-center gap-6 ">
+        <section  className="bg-white  w-full font-inter flex flex-col items-center gap-6 mb-6">
             <div className="w-full bg-white flex flex-col items-center justify-center gap-3">
                 <span className="text-blue-500 font-semibold">Pricing</span>
                 <span className="text-xl font-semibold">Choose Your Adventure</span>
@@ -85,6 +86,22 @@ export default function PricingSection() {
                 </li>
             </ul>
 
+            <div className=" max-w-[80%] sm:max-w-full rounded-md  bg-blue-100 flex ">
+                <div>
+
+                </div>
+                <div className="flex h-18 justify-center gap-6 w-full px-6 my-3">
+                    <img src={WizardHat} alt="" className="object-cover h-12 w-12" />
+                    <div className="flex flex-col justify-center gap-2 ">
+                        <span className="text-xs sm:text-sm font-semibold">Not sure yet?</span>
+                        <span className="text-xs sm:text-sm">Start with a free plan and upgrade anytime. No commitment, cancel whenever.</span>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
         </section>
     );
 }
+

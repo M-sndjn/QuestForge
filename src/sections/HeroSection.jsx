@@ -65,12 +65,12 @@ export default function HeroSection() {
                         </div>
                         {/* Tasks */}
                         <div className="h-1/3 w-full p-1 sm:text-sm text-[8px]">
-                            <div className="h-full w-full bg-white shadow-sm shadow-black rounded-lg p-2">
-                                <ul className="grid grid-cols-2 grid-rows-2 gap-4">
-                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
-                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
-                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
-                                    <li className="sm:h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
+                            <div className="h-full w-full flex bg-white shadow-sm shadow-black rounded-lg p-2 justify-center items-center">
+                                <ul className="w-full grid grid-cols-2 grid-rows-2 gap-4">
+                                    <li className=" h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
+                                    <li className=" h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
+                                    <li className=" h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
+                                    <li className=" h-16 p-3 flex border-black border bg-black/20 backdrop-blur-md rounded-md font-kodemono  justify-between items-center"><div>Drink water <br/>Damage :10 exp: 10</div><button className="sm:w-3 sm:h-3 w-2 h-2 rounded-sm border border-black"></button></li>
                                 </ul>
                             </div>
                         </div>

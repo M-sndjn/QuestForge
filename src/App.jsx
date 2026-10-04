@@ -10,7 +10,7 @@ import PricingSection from "./sections/PricingSection";
 function App() {
   return (
     <>
-      <div className="h-screen">
+      <div className="h-screen overflow-x-hidden ">
           <NavBar />
           <HeroSection />
           <FeaturesSection />
