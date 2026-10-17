@@ -5,6 +5,7 @@ import Calendar from "../assets/Calendar.png";
 import Analytics from "../assets/Analytics.png";
 import Trophy from "../assets/Trophy.png";
 import { useEffect, useRef, useState } from "react";
+import FeatureCard from "../components/FeatureCard";
 
 export default function FeaturesSection() {
     const [questVisible, setQuestVisible] = useState(false);
@@ -22,50 +23,30 @@ export default function FeaturesSection() {
     const analyticsRef = useRef(null);
 
     useEffect(() => {
-        const observerOptions = {
-            threshold: 0.3
-        };
+        const observerOptions = { threshold: 0.3 };
 
         const questObserver = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setQuestVisible(true);
-                questObserver.disconnect();
-            }
+            if (entry.isIntersecting) { setQuestVisible(true); questObserver.disconnect(); }
         }, observerOptions);
 
         const bossObserver = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setBossVisible(true);
-                bossObserver.disconnect();
-            }
+            if (entry.isIntersecting) { setBossVisible(true); bossObserver.disconnect(); }
         }, observerOptions);
 
         const streakObserver = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setStreakVisible(true);
-                streakObserver.disconnect();
-            }
+            if (entry.isIntersecting) { setStreakVisible(true); streakObserver.disconnect(); }
         }, observerOptions);
 
         const achievementObserver = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setAchievementVisible(true);
-                achievementObserver.disconnect();
-            }
+            if (entry.isIntersecting) { setAchievementVisible(true); achievementObserver.disconnect(); }
         }, observerOptions);
 
         const calendarObserver = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setCalendarVisible(true);
-                calendarObserver.disconnect();
-            }
+            if (entry.isIntersecting) { setCalendarVisible(true); calendarObserver.disconnect(); }
         }, observerOptions);
 
         const analyticsObserver = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setAnalyticsVisible(true);
-                analyticsObserver.disconnect();
-            }
+            if (entry.isIntersecting) { setAnalyticsVisible(true); analyticsObserver.disconnect(); }
         }, observerOptions);
 
         if (questRef.current) questObserver.observe(questRef.current);
@@ -86,9 +67,9 @@ export default function FeaturesSection() {
     }, []);
 
     return (
-        <section className="bg-white min-h-screen w-full">
+        <section className="bg-white min-h-screen w-full py-10">
             <div className="w-full h-full flex flex-col justify-center items-center">
-                <div className="h-10 w-full my-5 sm:text-base text-sm  bg-white flex items-center justify-center font-inter font-semibold gap-6">
+                <div className="h-10 w-full my-5 sm:text-base text-sm bg-white flex items-center justify-center font-inter font-semibold gap-6">
                     Your goals
                     <span className="text-blue-500 relative">
                         Your quest
@@ -97,67 +78,128 @@ export default function FeaturesSection() {
                     Your progress
                 </div>
 
-                <ul className="w-full h-full grid grid-cols-1 sm:grid-cols-3 grid-rows-2 justify-items-center items-center gap-4 text-center">
+                <ul className="w-full max-w-4xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center text-center">
 
                     {/* Quest System */}
-                    <li ref={questRef} className="sm:w-52 sm:h-56 px-1 w-48 h-52 relative font-inter flex flex-col justify-center items-center bg-slate-800 text-white rounded-md gap-4 overflow-hidden">
-                        <img src={Quest} alt="" className="sm:w-10 w-8" />
-                        <span className="font-semibold sm:text-base text-sm">Quest System</span>
-                        <span className="sm:text-sm text-xs">Turn tasks into rewarding quests</span>
-
-                        <div className={`absolute w-full h-full right-0 bg-blue-500 rounded-md ${questVisible ? "animate-reveal-right" : ""}`}></div>
-                        <div className={`absolute w-full h-full left-0 bg-blue-500 rounded-md ${questVisible ? "animate-reveal-left" : ""}`}></div>
-                    </li>
+                    <FeatureCard
+                        cardRef={questRef}
+                        visible={questVisible}
+                        icon={Quest}
+                        title="Quest System"
+                        desc="Turn tasks into rewarding quests"
+                        className="hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30"
+                        tintClass="bg-blue-500/15"
+                        coverClass="bg-blue-500"
+                    >
+                        <div className="h-1.5 w-full bg-slate-700 rounded-full">
+                            <div className="h-full w-2/3 bg-blue-500 rounded-full"></div>
+                        </div>
+                    </FeatureCard>
 
                     {/* Boss Battles */}
-                    <li ref={bossRef} className="sm:w-52 sm:h-56 px-1 w-48 h-52 relative font-inter flex flex-col justify-center items-center bg-slate-800 text-white rounded-md gap-4 overflow-hidden">
-                        <img src={Boss} alt="" className="sm:w-10 w-8" />
-                        <span className="font-semibold sm:text-base text-sm">Boss Battles</span>
-                        <span className="sm:text-sm text-xs">Complete tasks and defeat monsters</span>
-
-                        <div className={`absolute w-full h-full right-0 bg-red-500 rounded-md ${bossVisible ? "animate-reveal-right" : ""}`}></div>
-                        <div className={`absolute w-full h-full left-0 bg-red-500 rounded-md ${bossVisible ? "animate-reveal-left" : ""}`}></div>
-                    </li>
+                    <FeatureCard
+                        cardRef={bossRef}
+                        visible={bossVisible}
+                        icon={Boss}
+                        title="Boss Battles"
+                        desc="Complete tasks and defeat monsters"
+                        className="hover:border-red-500 hover:shadow-lg hover:shadow-red-500/30"
+                        tintClass="bg-red-500/15"
+                        coverClass="bg-red-500"
+                    >
+                        <div className="h-1.5 w-full bg-slate-700 rounded-full">
+                            <div className="h-full w-1/3 bg-red-500 rounded-full"></div>
+                        </div>
+                    </FeatureCard>
 
                     {/* Daily Streaks */}
-                    <li ref={streakRef} className="sm:w-52 sm:h-56 px-1 w-48 h-52 relative font-inter flex flex-col justify-center items-center bg-slate-800 text-white rounded-md gap-4 overflow-hidden">
-                        <img src={Fire} alt="" className="sm:w-10 w-8" />
-                        <span className="font-semibold sm:text-base text-sm">Daily Streaks</span>
-                        <span className="sm:text-sm text-xs w-[80%]">Build consistency, one day at a time</span>
-
-                        <div className={`absolute w-full h-full right-0 bg-orange-500 rounded-md ${streakVisible ? "animate-reveal-right" : ""}`}></div>
-                        <div className={`absolute w-full h-full left-0 bg-orange-500 rounded-md ${streakVisible ? "animate-reveal-left" : ""}`}></div>
-                    </li>
+                    <FeatureCard
+                        cardRef={streakRef}
+                        visible={streakVisible}
+                        icon={Fire}
+                        title="Daily Streaks"
+                        desc="Build consistency, one day at a time"
+                        className="hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/30"
+                        tintClass="bg-orange-500/15"
+                        coverClass="bg-orange-500"
+                    >
+                        <div className="flex gap-1.5">
+                            <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+                            <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+                            <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+                            <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+                            <span className="h-2 w-2 rounded-full bg-slate-600"></span>
+                            <span className="h-2 w-2 rounded-full bg-slate-600"></span>
+                            <span className="h-2 w-2 rounded-full bg-slate-600"></span>
+                        </div>
+                    </FeatureCard>
 
                     {/* Achievements */}
-                    <li ref={achievementRef} className="sm:w-52 sm:h-56 px-1 w-48 h-52 relative font-inter flex flex-col justify-center items-center bg-slate-800 text-white rounded-md gap-4 overflow-hidden">
-                        <img src={Trophy} alt="" className="sm:w-10 w-8" />
-                        <span className="font-semibold sm:text-base text-sm">Achievements</span>
-                        <span className="sm:text-sm text-xs w-[70%]">Earn badges for your progress</span>
-
-                        <div className={`absolute w-full h-full right-0 bg-yellow-500 rounded-md ${achievementVisible ? "animate-reveal-right" : ""}`}></div>
-                        <div className={`absolute w-full h-full left-0 bg-yellow-500 rounded-md ${achievementVisible ? "animate-reveal-left" : ""}`}></div>
-                    </li>
+                    <FeatureCard
+                        cardRef={achievementRef}
+                        visible={achievementVisible}
+                        icon={Trophy}
+                        title="Achievements"
+                        desc="Earn badges for your progress"
+                        className="hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500/30"
+                        tintClass="bg-yellow-500/15"
+                        coverClass="bg-yellow-500"
+                    >
+                        <div className="flex gap-2">
+                            <span className="h-4 w-4 rounded-md bg-yellow-500"></span>
+                            <span className="h-4 w-4 rounded-md bg-yellow-500"></span>
+                            <span className="h-4 w-4 rounded-md bg-slate-600"></span>
+                        </div>
+                    </FeatureCard>
 
                     {/* Calendar */}
-                    <li ref={calendarRef} className="sm:w-52 sm:h-56 px-1 w-48 h-52 relative font-inter flex flex-col justify-center items-center bg-slate-800 text-white rounded-md gap-4 overflow-hidden">
-                        <img src={Calendar} alt="" className="sm:w-10 w-8" />
-                        <span className="font-semibold sm:text-base text-sm">Calendar</span>
-                        <span className="sm:text-sm text-xs w-[70%]">Plan quests and stay on track</span>
-
-                        <div className={`absolute w-full h-full right-0 bg-green-500 rounded-md ${calendarVisible ? "animate-reveal-right" : ""}`}></div>
-                        <div className={`absolute w-full h-full left-0 bg-green-500 rounded-md ${calendarVisible ? "animate-reveal-left" : ""}`}></div>
-                    </li>
+                    <FeatureCard
+                        cardRef={calendarRef}
+                        visible={calendarVisible}
+                        icon={Calendar}
+                        title="Calendar"
+                        desc="Plan quests and stay on track"
+                        className="hover:border-green-500 hover:shadow-lg hover:shadow-green-500/30"
+                        tintClass="bg-green-500/15"
+                        coverClass="bg-green-500"
+                    >
+                        <div className="grid grid-cols-7 gap-1">
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                            <span className="h-1.5 w-1.5 rounded-full bg-slate-600"></span>
+                        </div>
+                    </FeatureCard>
 
                     {/* Analytics */}
-                    <li ref={analyticsRef} className="sm:w-52 sm:h-56 px-1 w-48 h-52 relative font-inter flex flex-col justify-center items-center bg-slate-800 text-white rounded-md gap-4 overflow-hidden">
-                        <img src={Analytics} alt="" className="sm:w-10 w-8" />
-                        <span className="font-semibold sm:text-base text-sm">Analytics</span>
-                        <span className="sm:text-sm text-xs">See how far you've come</span>
-
-                        <div className={`absolute w-full h-full right-0 bg-purple-500 rounded-md ${analyticsVisible ? "animate-reveal-right" : ""}`}></div>
-                        <div className={`absolute w-full h-full left-0 bg-purple-500 rounded-md ${analyticsVisible ? "animate-reveal-left" : ""}`}></div>
-                    </li>
+                    <FeatureCard
+                        cardRef={analyticsRef}
+                        visible={analyticsVisible}
+                        icon={Analytics}
+                        title="Analytics"
+                        desc="See how far you've come"
+                        className="hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/30"
+                        tintClass="bg-purple-500/15"
+                        coverClass="bg-purple-500"
+                    >
+                        <div className="flex items-end gap-1.5 h-8">
+                            <span className="w-2 h-3 rounded-sm bg-purple-500"></span>
+                            <span className="w-2 h-5 rounded-sm bg-purple-500"></span>
+                            <span className="w-2 h-4 rounded-sm bg-purple-500"></span>
+                            <span className="w-2 h-7 rounded-sm bg-purple-500"></span>
+                            <span className="w-2 h-8 rounded-sm bg-purple-500"></span>
+                        </div>
+                    </FeatureCard>
 
                 </ul>
             </div>
